@@ -149,5 +149,14 @@ footer{
     margin-top: 40px;
     color:#00a86b
 }
+.video-btn{
+    margin-left: 10px;
+    background: #ff5722;
+}
+
+.video-btn:hover{
+    background: #e64a19;
+}
+
 
 
