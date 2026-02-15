@@ -15,6 +15,7 @@ header{
     justify-content:space-between;
     padding:20px 80px;
     background:white;
+    flex-wrap:wrap;
 }
 
 .logo{
@@ -30,12 +31,17 @@ nav a{
     font-weight:500;
 }
 
+nav a:hover{
+    color:#00a86b;
+}
+
 /* HERO */
 .hero{
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:80px;
+    flex-wrap:wrap;
 }
 
 .content{
@@ -66,6 +72,7 @@ nav a{
     color:#00a86b;
 }
 
+/* BUTTONS */
 .btn{
     display:inline-block;
     margin-top:20px;
@@ -74,13 +81,31 @@ nav a{
     color:white;
     border-radius:25px;
     text-decoration:none;
+    cursor:pointer;
+    transition:0.3s;
 }
 
+.btn:hover{
+    background:#00875a;
+}
+
+.video-btn{
+    margin-left: 10px;
+    background: #ff5722;
+}
+
+.video-btn:hover{
+    background: #e64a19;
+}
+
+/* IMAGE */
 .image-box img{
     width:350px;
+    max-width:100%;
+    height:auto;
 }
 
-/* SECTION */
+/* SECTIONS */
 .section{
     padding:60px 80px;
     background:white;
@@ -96,11 +121,14 @@ nav a{
 .cgpa-table{
     border-collapse:collapse;
     margin-top:15px;
+    width:100%;
+    max-width:500px;
 }
 
 .cgpa-table th, .cgpa-table td{
     border:1px solid #333;
     padding:10px 20px;
+    text-align:center;
 }
 
 /* SKILLS */
@@ -111,12 +139,15 @@ nav a{
     padding:10px 15px;
     margin:5px;
     border-radius:20px;
+    font-size:14px;
 }
 
 /* PROJECTS */
 .projects{
     display:flex;
     gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .card{
@@ -124,18 +155,10 @@ nav a{
     padding:20px;
     border-radius:10px;
     width:250px;
-}
-
-/* FOOTER */
-
-/* FOOTER */
-footer{
     text-align:center;
-    padding:20px;
-    background:#00a86b;
-    color:white;
 }
 
+/* CONTACT */
 #contact {
     text-align: center;
 }
@@ -145,18 +168,93 @@ footer{
     line-height: 30px;
     font-size: 18px;
 }
+
+/* CGPA TITLE */
 .cgpa-title{
     margin-top: 40px;
-    color:#00a86b
-}
-.video-btn{
-    margin-left: 10px;
-    background: #ff5722;
+    color:#00a86b;
 }
 
-.video-btn:hover{
-    background: #e64a19;
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#00a86b;
+    color:white;
 }
 
+/* =========================
+   RESPONSIVE MEDIA QUERIES
+========================= */
 
+/* Tablets */
+@media screen and (max-width: 992px){
+    header{
+        flex-direction:column;
+        align-items:center;
+    }
+    nav{
+        margin-top:10px;
+    }
+    nav a{
+        margin: 8px 10px;
+    }
+    .hero{
+        padding:40px 30px;
+        flex-direction:column;
+        text-align:center;
+    }
+    .content{
+        width:100%;
+    }
+    .image-box{
+        margin-top:30px;
+    }
+    .btn{
+        width:70%;
+        margin:10px auto;
+    }
+}
 
+/* Mobile Phones */
+@media screen and (max-width: 768px){
+    .hero h1{
+        font-size:36px;
+    }
+    .hero h3{
+        font-size:22px;
+    }
+    .content p{
+        font-size:16px;
+    }
+    .skills span{
+        font-size:13px;
+        padding:6px 12px;
+    }
+    .card{
+        width:90%;
+    }
+    .cgpa-table{
+        width:90%;
+    }
+}
+
+/* Small Mobile Phones */
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size:28px;
+    }
+    .hero h3{
+        font-size:18px;
+    }
+    .content p{
+        font-size:14px;
+    }
+    .btn{
+        padding:10px 20px;
+        font-size:14px;
+    }
+    header .logo{
+        font-size:24px;
+    }
+}
